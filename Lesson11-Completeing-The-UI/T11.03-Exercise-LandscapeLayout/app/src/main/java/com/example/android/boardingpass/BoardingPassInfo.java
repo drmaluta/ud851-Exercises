@@ -26,23 +26,111 @@ import java.util.concurrent.TimeUnit;
  */
 public class BoardingPassInfo {
 
-    public String passengerName;
-    public String flightCode;
-    public String originCode;
-    public String destCode;
+    private String passengerName;
+    private String flightCode;
+    private String originCode;
+    private String destCode;
 
-    public Timestamp boardingTime;
-    public Timestamp departureTime;
-    public Timestamp arrivalTime;
+    private Timestamp boardingTime;
+    private Timestamp departureTime;
+    private Timestamp arrivalTime;
 
-    public String departureTerminal;
-    public String departureGate;
-    public String seatNumber;
+    private String departureTerminal;
+    private String departureGate;
+    private String seatNumber;
 
-    public int barCodeImageResource;
+    private int barCodeImageResource;
 
     public long getMinutesUntilBoarding() {
         long millisUntilBoarding = boardingTime.getTime() - System.currentTimeMillis();
         return TimeUnit.MILLISECONDS.toMinutes(millisUntilBoarding);
+    }
+
+    public String getPassengerName() {
+        return passengerName;
+    }
+
+    public void setPassengerName(String passengerName) {
+        this.passengerName = passengerName;
+    }
+
+    public String getFlightCode() {
+        return flightCode;
+    }
+
+    public void setFlightCode(String flightCode) {
+        this.flightCode = flightCode;
+    }
+
+    public String getOriginCode() {
+        return originCode;
+    }
+
+    public void setOriginCode(String originCode) {
+        this.originCode = originCode;
+    }
+
+    public String getDestCode() {
+        return destCode;
+    }
+
+    public void setDestCode(String destCode) {
+        this.destCode = destCode;
+    }
+
+    public Timestamp getBoardingTime() {
+        return boardingTime;
+    }
+
+    public void setBoardingTime(Timestamp boardingTime) {
+        this.boardingTime = boardingTime;
+    }
+
+    public Timestamp getDepartureTime() {
+        return departureTime;
+    }
+
+    public void setDepartureTime(Timestamp departureTime) {
+        this.departureTime = departureTime;
+    }
+
+    public Timestamp getArrivalTime() {
+        return arrivalTime;
+    }
+
+    public void setArrivalTime(Timestamp arrivalTime) {
+        this.arrivalTime = arrivalTime;
+    }
+
+    public String getDepartureTerminal() {
+        return departureTerminal;
+    }
+
+    public void setDepartureTerminal(String departureTerminal) {
+        this.departureTerminal = departureTerminal;
+    }
+
+    public String getDepartureGate() {
+        return departureGate;
+    }
+
+    public void setDepartureGate(String departureGate) {
+        this.departureGate = departureGate;
+    }
+
+    public String getSeatNumber() {
+        return seatNumber;
+    }
+
+    public void setSeatNumber(String seatNumber) {
+        this.seatNumber = seatNumber;
+    }
+
+    public int getBarCodeImageResource() {
+        return barCodeImageResource;
+    }
+
+    public void setBarCodeImageResource(int barCodeImageResource) {
+        this.barCodeImageResource = barCodeImageResource;
     }
 }

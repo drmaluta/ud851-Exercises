@@ -35,10 +35,10 @@ public class FakeDataUtils {
 
         BoardingPassInfo bpi = new BoardingPassInfo();
 
-        bpi.passengerName = "MR. RANDOM PERSON";
-        bpi.flightCode = "UD 777";
-        bpi.originCode = "JFK";
-        bpi.destCode = "DCA";
+        bpi.setPassengerName("MR. RANDOM PERSON");
+        bpi.setFlightCode("UD 777");
+        bpi.setOriginCode("JFK");
+        bpi.setDestCode("DCA");
 
         long now = System.currentTimeMillis();
 
@@ -53,13 +53,13 @@ public class FakeDataUtils {
         long departure = boardingMillis + minutesToMillis(totalBoardingMinutes);
         long arrival = departure + hoursToMillis(randomFlightLengthHours);
 
-        bpi.boardingTime = new Timestamp(boardingMillis);
-        bpi.departureTime = new Timestamp(departure);
-        bpi.arrivalTime = new Timestamp(arrival);
-        bpi.departureTerminal = "3A";
-        bpi.departureGate = "33C";
-        bpi.seatNumber = "1A";
-        bpi.barCodeImageResource = R.drawable.art_plane;
+        bpi.setBoardingTime(new Timestamp(boardingMillis));
+        bpi.setDepartureTime(new Timestamp(departure));
+        bpi.setArrivalTime(new Timestamp(arrival));
+        bpi.setDepartureTerminal("3A");
+        bpi.setDepartureGate("33C");
+        bpi.setSeatNumber("1A");
+        bpi.setBarCodeImageResource(R.drawable.art_plane);
 
         return bpi;
     }
